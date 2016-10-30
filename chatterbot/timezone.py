@@ -1,7 +1,5 @@
 import sys
 from geopy import geocoders
-from tzwhere import tzwhere
-import shapely
 import re
 from fuzzywuzzy import fuzz
 import re
