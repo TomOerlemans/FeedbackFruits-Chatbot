@@ -21,7 +21,7 @@ class TimeZone:
                           'would', 'in', 'oke', 'okay' , 'ok', 'then', 'can', 'you', 'me', 'local', 'current',
                           'right', 'now', 'tell', 'give', 'hi', 'hello', 'tell', 'at' ,'zone', 'and',
                           'country', 'place', 'postal', 'code', 'also', 'be', 'moment', 'alright', 'good', 
-                          'all', 'right', 'great', 'thanks', 'thank', 'you', 'currently']
+                          'all', 'right', 'great', 'thanks', 'thank', 'you', 'currently', 'do', 'know']
         querywords = query.split()
         locationRelatedWords = [word for word in querywords if word.lower() not in unrelatedWords]
         locationRelatedWords = ' '.join(locationRelatedWords)
