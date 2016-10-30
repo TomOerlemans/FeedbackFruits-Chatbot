@@ -12,6 +12,7 @@ chatBot = ChatBot(
     read_only=True
 )
 
+
 print("Type something to begin...")
 
 # The following loop will execute each time the user enters input
