@@ -19,7 +19,8 @@ class TimeZone:
         query = re.sub("[^a-z0-9]+", " ", query, flags=re.IGNORECASE)  # Removes all special characters
         unrelatedWords = ['what', 'is', 'a', 'at', 'the', 'in', 'time', 'it', 'could', 'please',
                           'would', 'in', 'oke', 'okay' , 'ok', 'then', 'can', 'you', 'me', 'local', 'current',
-                          'right', 'now', 'tell', 'give', 'hi', 'hello', 'tell', 'at' ,'zone', 'and']
+                          'right', 'now', 'tell', 'give', 'hi', 'hello', 'tell', 'at' ,'zone', 'and',
+                          'country', 'place', 'postal', 'code']
         querywords = query.split()
         locationRelatedWords = [word for word in querywords if word.lower() not in unrelatedWords]
         locationRelatedWords = ' '.join(locationRelatedWords)

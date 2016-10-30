@@ -5,7 +5,7 @@ chatBot = ChatBot(
     storage_adapter="chatterbot.adapters.storage.JsonFileStorageAdapter",
     input_adapter="chatterbot.adapters.input.TerminalAdapter",
     output_adapter="chatterbot.adapters.output.TerminalAdapter",
-    database="cities.db",
+    database="response_database.db",
     logic_adapters=[
         "chatterbot.adapters.logic.ClosestMatchAdapter"
     ],
