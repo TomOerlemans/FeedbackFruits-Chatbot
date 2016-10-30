@@ -1,7 +1,7 @@
 # FeedbackFruits-Chatbot
 
 
-FeedbackFruits-Chatbot is a chatbot build using the ChatterBot Python library. 
+FeedbackFruits-Chatbot is a chatbot which can give you the current time for a wide range of locations. This chatbot is build using the ChatterBot Python library.
 
 ## How it works
 
