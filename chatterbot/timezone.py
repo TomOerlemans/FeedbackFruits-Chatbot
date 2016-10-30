@@ -65,6 +65,6 @@ class TimeZone:
                 outputLocation = re.sub("[^a-z0-9]+", " ", place.replace("Local", ""), flags=re.IGNORECASE)
                 return "Local time in " + outputLocation + " is " + datetime.datetime.now(timezone).strftime("%H:%M:%S")
             except:
-                return "Sorry I couldn't find the current time in " + locationFiltered + ". Are you sure that you spelled that correctly?"
+                return "Sorry I am not sure, could you please rephrase that quesion?"
         else:
             return multipleTimeZones
