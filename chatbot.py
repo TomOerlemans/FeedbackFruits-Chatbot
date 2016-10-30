@@ -9,7 +9,7 @@ chatBot = ChatBot(
     storage_adapter="chatterbot.adapters.storage.JsonFileStorageAdapter",
     input_adapter="chatterbot.adapters.input.TerminalAdapter",
     output_adapter="chatterbot.adapters.output.TerminalAdapter",
-    database="chatterbot.data.cities.db",
+    database="cities.db",
     read_only=True
 )
 
