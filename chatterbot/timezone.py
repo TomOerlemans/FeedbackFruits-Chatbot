@@ -17,9 +17,9 @@ class TimeZone:
         :return: filteredString: The user's query with most of the words unrelated to the location stripped off
         """
         query = re.sub("[^a-z0-9]+", " ", query, flags=re.IGNORECASE)  # Removes all special characters
-        unrelatedWords = ['what', 'who', 'is', 'a', 'at', 'the', 'in', 'time', 'it', 'could', 'please',
+        unrelatedWords = ['what', 'is', 'a', 'at', 'the', 'in', 'time', 'it', 'could', 'please',
                           'would', 'in', 'oke', 'okay' , 'ok', 'then', 'can', 'you', 'me', 'local', 'current',
-                          'right', 'now', 'tell', 'give', 'hi', 'hello', 'tell', 'at' ,'zone']
+                          'right', 'now', 'tell', 'give', 'hi', 'hello', 'tell', 'at' ,'zone', 'and']
         querywords = query.split()
         locationRelatedWords = [word for word in querywords if word.lower() not in unrelatedWords]
         locationRelatedWords = ' '.join(locationRelatedWords)
@@ -62,7 +62,7 @@ class TimeZone:
                 timezone = g.timezone((lat, lng))
                 outputLocation = place.replace("Local", "")
                 return "Local time in " + outputLocation + " is " + datetime.datetime.now(timezone).strftime("%H:%M:%S")
-            except (RuntimeError, TypeError, NameError):
+            except:
                 return "Sorry I couldn't find the current time in " + locationFiltered + ". Are you sure that you spelled that correctly?"
         else:
             return multipleTimeZones

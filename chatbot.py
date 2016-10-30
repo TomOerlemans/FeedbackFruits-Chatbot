@@ -6,6 +6,9 @@ chatBot = ChatBot(
     input_adapter="chatterbot.adapters.input.TerminalAdapter",
     output_adapter="chatterbot.adapters.output.TerminalAdapter",
     database="cities.db",
+    logic_adapters=[
+        "chatterbot.adapters.logic.ClosestMatchAdapter"
+    ],
     read_only=True
 )
 
