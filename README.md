@@ -55,5 +55,5 @@ pip install pytz
 
 
 ```
-$ python chatterbot.py
+$ python chatbot.py
 ```
