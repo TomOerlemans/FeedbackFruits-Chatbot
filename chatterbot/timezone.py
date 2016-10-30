@@ -20,7 +20,8 @@ class TimeZone:
         unrelatedWords = ['what', 'is', 'a', 'at', 'the', 'in', 'time', 'it', 'could', 'please',
                           'would', 'in', 'oke', 'okay' , 'ok', 'then', 'can', 'you', 'me', 'local', 'current',
                           'right', 'now', 'tell', 'give', 'hi', 'hello', 'tell', 'at' ,'zone', 'and',
-                          'country', 'place', 'postal', 'code']
+                          'country', 'place', 'postal', 'code', 'also', 'be', 'moment', 'alright', 'good', 
+                          'all', 'right', 'great', 'thanks', 'thank', 'you']
         querywords = query.split()
         locationRelatedWords = [word for word in querywords if word.lower() not in unrelatedWords]
         locationRelatedWords = ' '.join(locationRelatedWords)
@@ -61,7 +62,7 @@ class TimeZone:
             try:
                 place, (lat, lng) = g.geocode(locationFiltered)
                 timezone = g.timezone((lat, lng))
-                outputLocation = place.replace("Local", "")
+                outputLocation = re.sub("[^a-z0-9]+", " ", place.replace("Local", ""), flags=re.IGNORECASE)
                 return "Local time in " + outputLocation + " is " + datetime.datetime.now(timezone).strftime("%H:%M:%S")
             except:
                 return "Sorry I couldn't find the current time in " + locationFiltered + ". Are you sure that you spelled that correctly?"

@@ -22,7 +22,10 @@ class TerminalAdapter(OutputAdapter):
         Print the response to the user's input.
         """
         init()
-        print(Fore.GREEN + statement.text)
-        print(Style.RESET_ALL)
+        try:
+            print(Fore.GREEN + statement.text)
+            print(Style.RESET_ALL)
+        except:
+            print(statement.text)
         return statement.text
 
